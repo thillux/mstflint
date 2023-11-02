@@ -58,7 +58,7 @@ libmtcr_ul_la_SOURCES = \
     mtcr_ul.c \
     mtcr_ul_com_defs.h
 
-libmtcr_ul_la_CFLAGS = -W -Wall -g -MP -MD -fPIC -DMTCR_API="" -DMST_UL
+libmtcr_ul_la_CFLAGS = -W -Wall -g -MP -MD -$(COMPILER_FPIC) -DMTCR_API="" -DMST_UL
 
 if ENABLE_INBAND
 libmtcr_ul_la_SOURCES += $(top_srcdir)/mtcr_ul/mtcr_ib_ofed.c
