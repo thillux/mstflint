@@ -46,12 +46,12 @@ bin_SCRIPTS = mstfwreset
 
 mstmread_SOURCES = mread.c
 mstmread_DEPENDENCIES = $(top_builddir)/${MTCR_CONF_DIR}/libmtcr_ul.la
-mstmread_LDADD = $(mstmread_DEPENDENCIES) ${LDL}
+mstmread_LDADD = ${LDL} $(mstmread_DEPENDENCIES)
 mstmread_LDFLAGS = -static
 
 mstmwrite_SOURCES = mwrite.c
 mstmwrite_DEPENDENCIES = $(top_builddir)/${MTCR_CONF_DIR}/libmtcr_ul.la
-mstmwrite_LDADD = $(mstmwrite_DEPENDENCIES) ${LDL}
+mstmwrite_LDADD = ${LDL} $(mstmwrite_DEPENDENCIES)
 mstmwrite_LDFLAGS = -static
 
 mstvpd_SOURCES = vpd.c
@@ -60,7 +60,7 @@ mstvpd_DEPENDENCIES = $(top_builddir)/mvpd/libmvpd.la \
                $(top_builddir)/dev_mgt/libdev_mgt.la \
                $(top_builddir)/reg_access/libreg_access.la \
                $(top_builddir)/tools_layouts/libtools_layouts.la
-mstvpd_LDADD = $(mstvpd_DEPENDENCIES) ${LDL}
+mstvpd_LDADD = ${LDL} $(mstvpd_DEPENDENCIES)
 mstvpd_LDFLAGS = -static
 
 mstcongestion_SOURCES = congestion.cpp
@@ -70,18 +70,18 @@ mstcongestion_DEPENDENCIES = $(top_builddir)/cmdif/libcmdif.la \
                       $(top_builddir)/tools_layouts/libtools_layouts.la \
                       $(top_builddir)/cmdparser/libcmdparser.a \
                       $(top_builddir)/${MTCR_CONF_DIR}/libmtcr_ul.la
-mstcongestion_LDADD = $(mstcongestion_DEPENDENCIES) ${LDL}
+mstcongestion_LDADD = ${LDL} $(mstcongestion_DEPENDENCIES)
 mstcongestion_LDFLAGS = -static
 
 mstmcra_SOURCES = mcra.c
 mstmcra_DEPENDENCIES = $(top_builddir)/${MTCR_CONF_DIR}/libmtcr_ul.la
-mstmcra_LDADD = $(mstmcra_DEPENDENCIES) ${LDL}
+mstmcra_LDADD = ${LDL} $(mstmcra_DEPENDENCIES)
 mstmcra_LDFLAGS = -static
 
 mstmtserver_SOURCES = mtserver.c tcp.c tcp.h
 mstmtserver_CFLAGS = -DMST_UL
 mstmtserver_DEPENDENCIES = $(top_builddir)/${MTCR_CONF_DIR}/libmtcr_ul.la
-mstmtserver_LDADD = $(mstmtserver_DEPENDENCIES) ${LDL}
+mstmtserver_LDADD = ${LDL} $(mstmtserver_DEPENDENCIES)
 mstmtserver_LDFLAGS = -static
 
 SUBDIRS = mlxfwresetlib
