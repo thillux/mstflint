@@ -44,7 +44,7 @@ libmtcr_ul_la_SOURCES = mtcr_ul.c mtcr_ib.h  mtcr_int_defs.h\
 			packets_common.c packets_common.h\
 			packets_layout.c packets_layout.h \
 			mlx5ctl.c mlx5ctl.h mlx5ctl_ioctl.h
-libmtcr_ul_la_CFLAGS = -W -Wall -g -MP -MD -$(COMPILER_FPIC) -DMTCR_API="" -DMST_UL
+libmtcr_ul_la_CFLAGS = -W -Wall -g -MP -MD $(COMPILER_FPIC) -DMTCR_API="" -DMST_UL
 
 if ENABLE_INBAND
 libmtcr_ul_la_SOURCES += mtcr_ib_ofed.c
